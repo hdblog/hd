@@ -1,0 +1,11 @@
+<!--pages/button/button.wxml-->
+<button>按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+
+<button size="mini" type="warn">红色按钮</button>
+<button size="mini" type="primary">绿色按钮</button>
+<button size="mini" type="primary" loading>绿色按钮</button>
+
+<button size="mini" type="primary" plain>绿色按钮</button>
+<button size="mini" hover-class="pressed">红色按钮</button>

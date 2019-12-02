@@ -1,0 +1,15 @@
+<!--pages/scroll/scroll.wxml-->
+
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" class="item" wx:key='index'>sdfsdf</view>
+</scroll-view>
+
+
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" class="item2" wx:key='index'>sdfsdf</view>
+</scroll-view>
+
+
+<block wx:for="{{10}}" wx:key='index'>
+  <view>dddd</view>
+</block>
