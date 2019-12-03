@@ -13,8 +13,7 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "来懂博客",
     "backgroundColor": "#EBEBEB",
-    "backgroundTextStyle": "dark",
-    "enablePullDownRefresh": true
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "selectedColor": "#FE6905",

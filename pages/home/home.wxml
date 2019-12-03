@@ -1,38 +1,4 @@
 <!--pages/home/home.wxml-->
 <view class="page">
-  <view class="page__bd">
-    <view class="weui-search-bar">
-      <view class="weui-search-bar__form">
-        <view class="weui-search-bar__box">
-          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
-          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-            <icon type="clear" size="14"></icon>
-          </view>
-        </view>
-        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-          <icon class="weui-icon-search" type="search" size="14"></icon>
-          <view class="weui-search-bar__text">搜索</view>
-        </label>
-      </view>
-      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
-    </view>
-
-
-    <navigator wx:for="{{list}}" wx:key="index" url="/pages/list/list?categoryId={{item.id}}&categoryName={{item.name}}">
-      <view class="weui-cell weui-cell_access">
-        <view class="weui-cell__bd">
-          <view style="display: inline-block; vertical-align: middle">{{item.name}}</view>
-        </view>
-        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-      </view>
-    </navigator>
-
-
-
-    <navigator url="/pages/view/view">跳转详细</navigator>
-    <navigator url="/pages/view/view?id=10&title=小明">传递参数</navigator>
-    {{title}}
-    <button size="mini" bind:tap="handlePushDetail">代码跳转</button>
-  </view>
-</view>
+ <h-swiper images="{{banner1}}"/>
+</view> 

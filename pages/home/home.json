@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "h-swiper": "/components/h-swiper/h-swiper"
+  },
+  "navigationBarTitleText": "汽车购物"
 }

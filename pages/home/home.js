@@ -2,59 +2,58 @@
 const WXAPI = require('apifm-wxapi')
 const CONFIG = require('../../config.js')
 
+import {
+  getMultiData
+} from '../../service/home.js'
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    category: [],
-    list: [],
-    counter: 0,
-    inputShowed: false,
-    inputVal: "",
-    title: '第一次标题'
-  },
-  handlePushDetail() {
-    wx.navigateTo({
-      url: '/pages/view/view?id=20&name=小红&age=22',
-    })
-  },
-
-  // 以下为搜索框事件
-  showInput: function() {
-    this.setData({
-      inputShowed: true
-    });
-  },
-  hideInput: function() {
-    this.setData({
-      inputVal: "",
-      inputShowed: false
-    });
-  },
-  clearInput: function() {
-    this.setData({
-      inputVal: ""
-    });
-  },
-  inputTyping: function(e) {
-    this.setData({
-      inputVal: e.detail.value
-    });
+    banner1: [],
+    banner2: []
   },
 
   //载入数据
   onLoad() {
+    //请求banner轮播图
+    /* WXAPI.banners({type:'a1'}).then(res => {
+       console.log(res.data)
+       if (res.code == 0) {
+         this.setData({
+           list: res.data
+         })
+       }
+     })*/
 
-    WXAPI.cmsCategories().then(res => {
+    getMultiData().then(res => {
       if (res.code == 0) {
+        const datas = res.data;
+        const a1 = [];
+        const a2 = [];
+        for (var key in datas) {
+          // console.log(datas[key])
+          switch (datas[key].type) {
+            case 'a1':
+              a1[key] = datas[key];
+              break;
+            case 'a2':
+              a2[key] = datas[key];
+              break;
+          }
+        }
+        console.log(a1);
+        console.log(datas);
+
         this.setData({
-          list: res.data
+          banner1: a1,
+          banner2: a2
         })
       }
     })
-
   }
 
 })
