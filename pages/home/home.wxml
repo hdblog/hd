@@ -18,7 +18,7 @@
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
 
-   <view class="weui-cells weui-cells_after-title" wx:for="{{list}}"  wx:key="index">
+    <view class="weui-cells weui-cells_after-title" wx:for="{{list}}" wx:key="index">
       <view class="weui-cell">
         <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
           <image src="{{api_url}}/up/article/{{item.picurl}}" style="width: 50px; height: 50px; display: block" />
@@ -29,7 +29,8 @@
         </view>
       </view>
     </view>
-  
+
     <navigator url="/pages/view/view">跳转详细</navigator>
+    <navigator url="/pages/view/view?id=10&name=小明&age=18">传递参数</navigator>
   </view>
 </view>
