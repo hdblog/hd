@@ -1,27 +1,17 @@
 /* pages/home/home.wxss */
 
-.title {
-  color: #057;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  font-size: 20px;
-}
-
-.btn {
-  text-align: center;
-  margin: 10px;
-}
 
 
-.searchbar-result{
-    margin-top: 0;
-    font-size: 14px;
+.recomend {
+  display: flex;
 }
-.searchbar-result .weui-cell__bd{
-  padding: 2px 0 2px 20px;
-  color: #666;
+
+.recommend-item {
+  flex:1;
 }
-.searchbar-result:before{
-    display: none;
+
+.recommend-item image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
 }

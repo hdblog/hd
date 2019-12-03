@@ -13,8 +13,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banner1: [],
-    banner2: []
+    banners: [],
+    recommends: []
   },
 
   //载入数据
@@ -32,25 +32,25 @@ Page({
     getMultiData().then(res => {
       if (res.code == 0) {
         const datas = res.data;
-        const a1 = [];
-        const a2 = [];
+        const banners = [];
+        const recommends = [];
         for (var key in datas) {
           // console.log(datas[key])
           switch (datas[key].type) {
-            case 'a1':
-              a1[key] = datas[key];
+            case 'banner':
+              banners.push(datas[key]);
               break;
-            case 'a2':
-              a2[key] = datas[key];
+            case 'recommend':
+              recommends.push(datas[key]);
               break;
           }
         }
-        console.log(a1);
-        console.log(datas);
+
+     console.log(recommends)
 
         this.setData({
-          banner1: a1,
-          banner2: a2
+          banners: banners,
+          recommends: recommends
         })
       }
     })

@@ -1,4 +1,12 @@
 <!--pages/home/home.wxml-->
 <view class="page">
- <h-swiper images="{{banner1}}"/>
-</view> 
+  <h-swiper images="{{banners}}" />
+ <view class="recommend">
+   <block wx:for="{{recommends}}" wx:key="index">
+      <view class="recommend-item">
+        <image src="{{item.picUrl}}"></image>
+            <text>{{item.title}}</text>
+      </view>
+   </block>
+ </view>
+</view>
