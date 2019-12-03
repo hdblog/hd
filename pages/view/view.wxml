@@ -1,6 +1,7 @@
 <!--pages/view/view.wxml-->
 <view class="box">ID：{{id}}</view>
-<view class="box">name:{{name}}</view>
-<view class="box">age:{{age}}</view>
+<view >{{title}}</view>
 <view class="box">详情页</view>
 <navigator open-type="navigateBack">返回</navigator>
+
+<button size="mini" bindtap="backHome">返回</button>

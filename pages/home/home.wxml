@@ -25,13 +25,13 @@
         </view>
         <view class="weui-cell__bd">
           <view>{{item.title}}</view>
-          <view style="font-size: 13px;color: #888888;">摘要信息</view>
+          <navigator style="font-size: 13px;color: #888888;" url="/pages/view/view?id={{item.id}}&title={{item.title}}">查看详情</navigator>
         </view>
       </view>
     </view>
 
     <navigator url="/pages/view/view">跳转详细</navigator>
-    <navigator url="/pages/view/view?id=10&name=小明&age=18">传递参数</navigator>
+    <navigator url="/pages/view/view?id=10&title=小明">传递参数</navigator>
     {{title}}
     <button size="mini" bind:tap="handlePushDetail">代码跳转</button>
   </view>
