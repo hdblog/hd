@@ -18,17 +18,17 @@
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
 
-    <view class="weui-cells weui-cells_after-title" wx:for="{{list}}" wx:key="index">
-      <view class="weui-cell">
-        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-          <image src="{{api_url}}/up/article/{{item.picurl}}" style="width: 50px; height: 50px; display: block" />
-        </view>
+
+    <navigator wx:for="{{list}}" wx:key="index" url="/pages/list/list?categoryId={{item.id}}">
+      <view class="weui-cell weui-cell_access">
         <view class="weui-cell__bd">
-          <view>{{item.title}}</view>
-          <navigator style="font-size: 13px;color: #888888;" url="/pages/view/view?id={{item.id}}&title={{item.title}}">查看详情</navigator>
+          <view style="display: inline-block; vertical-align: middle">{{item.name}}</view>
         </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </view>
-    </view>
+    </navigator>
+
+
 
     <navigator url="/pages/view/view">跳转详细</navigator>
     <navigator url="/pages/view/view?id=10&title=小明">传递参数</navigator>

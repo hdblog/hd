@@ -1,14 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about",
     "pages/category/category",
     "pages/cart/cart",
     "pages/profile/profile",
-    "pages/button/button",
     "pages/view/view",
-    "pages/input/input",
-    "pages/scroll/scroll",
+    "pages/list/list",
     "pages/login/login"
   ],
   "window": {
@@ -41,7 +38,7 @@
         "selectedIconPath": "assets/tabbar/cart_active.png"
       },
       {
-        "pagePath": "pages/scroll/scroll",
+        "pagePath": "pages/profile/profile",
         "text": "我的",
         "iconPath": "assets/tabbar/profile.png",
         "selectedIconPath": "assets/tabbar/profile_active.png"

@@ -2,7 +2,7 @@ const WXAPI = require('apifm-wxapi')
 const CONFIG = require('config.js')
 
 const TOKEN = 'token';
-const api_url = "http://47.98.121.11:81";
+const api_url = "https://api.it120.cc/laidong/";
 
 App({
   globaData: {
@@ -18,10 +18,10 @@ App({
 
     if (token && token.length !== 0) {
       //已经有token 验证token是否过期
-       this.check_token(token)
+     //  this.check_token(token)
     } else {
       //没有token 登录获取token
-        this.login()
+       // this.login()
     }
 
 

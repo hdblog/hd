@@ -1,6 +1,0 @@
-<!--pages/input/input.wxml-->
-<input class="input" placeholder="搜索" confirm-type="search"/> 
-<input class="input" value="hahha"  type="number"/> 
-<input class="input" value="hahha" type="text"/> 
-<input class="input" value="hahha" password/> 
-<input class="input" placeholder="请输入用户名"/> 

@@ -1,0 +1,14 @@
+<!--pages/list/list.wxml-->
+文章列表页{{cateogryId}}
+<navigator wx:for="{{list}}" wx:key="index" url="/pages/view/view?id={{item.id}}&title={{item.title}}" >
+   <view class="weui-cells weui-cells_after-title" >
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src="{{item.pic}}" style="width: 50px; height: 50px; display: block" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+</navigator>

@@ -2,17 +2,18 @@
 
 
 Page({
- 
+
   /**
    * 页面的初始数据
    */
   data: {
+    category: [],
     list: [],
     counter: 0,
     inputShowed: false,
     inputVal: "",
-    api_url:"http://47.98.121.11:81",
-    title:'第一次标题'
+    api_url: "https://api.it120.cc/laidong/",
+    title: '第一次标题'
   },
   handlePushDetail() {
     wx.navigateTo({
@@ -20,24 +21,24 @@ Page({
     })
   },
 
- // 以下为搜索框事件
-  showInput: function () {
+  // 以下为搜索框事件
+  showInput: function() {
     this.setData({
       inputShowed: true
     });
   },
-  hideInput: function () {
+  hideInput: function() {
     this.setData({
       inputVal: "",
       inputShowed: false
     });
   },
-  clearInput: function () {
+  clearInput: function() {
     this.setData({
       inputVal: ""
     });
   },
-  inputTyping: function (e) {
+  inputTyping: function(e) {
     this.setData({
       inputVal: e.detail.value
     });
@@ -45,13 +46,11 @@ Page({
 
   //载入数据
   onLoad() {
-    console.log('onload')
     const _this = this;
     wx.request({
-      url: 'http://47.98.121.11:81/home/content/article?catid=10',
+      url: 'https://api.it120.cc/laidong/' + '/cms/category/list',
       success: function(res) {
-        console.log(res.data.data)
-        const data = res.data.data.model;
+        const data = res.data.data;
         _this.setData({
           list: data
         })
