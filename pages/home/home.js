@@ -35,18 +35,7 @@ Page({
       inputVal: e.detail.value
     });
   },
-  //计数测试
-  handleBtnClickAdd() {
-    this.setData({
-      counter: this.data.counter + 1
-    })
-  },
 
-  handleBtnClickSub() {
-    this.setData({
-      counter: this.data.counter - 1
-    })
-  },
   //载入数据
   onLoad() {
     console.log('onload')
