@@ -1,7 +1,19 @@
 <!--pages/view/view.wxml-->
-<view class="box">ID：{{id}}</view>
-<view >{{title}}</view>
-<view class="box">详情页</view>
-<navigator open-type="navigateBack">返回</navigator>
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">{{categoryName}}</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">{{article.title}}</view>
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__p">
+          <rich-text nodes="{{article.content}}"></rich-text>
+          </view>
+        </view>
 
-<button size="mini" bindtap="backHome">返回</button>
+      </view>
+    </view>
+  </view>
+</view>

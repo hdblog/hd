@@ -1,6 +1,6 @@
 <!--pages/list/list.wxml-->
 文章列表页{{cateogryId}}
-<navigator wx:for="{{list}}" wx:key="index" url="/pages/view/view?id={{item.id}}&title={{item.title}}" >
+<navigator wx:for="{{list}}" wx:key="index" url="/pages/view/view?id={{item.id}}&categoryName={{categoryName}}" >
    <view class="weui-cells weui-cells_after-title" >
       <view class="weui-cell">
         <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">

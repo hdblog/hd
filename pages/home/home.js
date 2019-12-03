@@ -1,5 +1,6 @@
 // pages/home/home.js
-
+const WXAPI = require('apifm-wxapi')
+const CONFIG = require('../../config.js')
 
 Page({
 
@@ -12,7 +13,6 @@ Page({
     counter: 0,
     inputShowed: false,
     inputVal: "",
-    api_url: "https://api.it120.cc/laidong/",
     title: '第一次标题'
   },
   handlePushDetail() {
@@ -46,16 +46,15 @@ Page({
 
   //载入数据
   onLoad() {
-    const _this = this;
-    wx.request({
-      url: 'https://api.it120.cc/laidong/' + '/cms/category/list',
-      success: function(res) {
-        const data = res.data.data;
-        _this.setData({
-          list: data
+
+    WXAPI.cmsCategories().then(res => {
+      if (res.code == 0) {
+        this.setData({
+          list: res.data
         })
       }
     })
+
   }
 
 })

@@ -1,4 +1,7 @@
 // pages/view/view.js
+const WXAPI = require('apifm-wxapi')
+const CONFIG = require('../../config.js')
+
 Page({
 
   /**
@@ -6,7 +9,7 @@ Page({
    */
   data: {
     id: 0,
-    title: ''
+    categoryName: ''
   },
 
   backHome(){
@@ -18,12 +21,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options)
     this.setData({
-      id: options.id,
-      title: options.title
+      categoryName: options.categoryName
     })
-    console.log(options);
-    console.log(options.id)
+
+
+    WXAPI.cmsArticleDetail(options.id).then(res => {
+      
+      if (res.code == 0) {
+        this.setData({
+          article: res.data
+        })
+      }
+    })
+
   },
 
   

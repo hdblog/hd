@@ -19,7 +19,7 @@
     </view>
 
 
-    <navigator wx:for="{{list}}" wx:key="index" url="/pages/list/list?categoryId={{item.id}}">
+    <navigator wx:for="{{list}}" wx:key="index" url="/pages/list/list?categoryId={{item.id}}&categoryName={{item.name}}">
       <view class="weui-cell weui-cell_access">
         <view class="weui-cell__bd">
           <view style="display: inline-block; vertical-align: middle">{{item.name}}</view>
