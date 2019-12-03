@@ -2,7 +2,7 @@
 
 
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
@@ -14,6 +14,12 @@ Page({
     api_url:"http://47.98.121.11:81",
     title:'第一次标题'
   },
+  handlePushDetail() {
+    wx.navigateTo({
+      url: '/pages/view/view?id=20&name=小红&age=22',
+    })
+  },
+
  // 以下为搜索框事件
   showInput: function () {
     this.setData({
