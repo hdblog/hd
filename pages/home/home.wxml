@@ -32,5 +32,6 @@
 
     <navigator url="/pages/view/view">跳转详细</navigator>
     <navigator url="/pages/view/view?id=10&name=小明&age=18">传递参数</navigator>
+    {{title}}
   </view>
 </view>

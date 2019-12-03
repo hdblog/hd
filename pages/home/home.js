@@ -11,7 +11,8 @@ Page({
     counter: 0,
     inputShowed: false,
     inputVal: "",
-    api_url:"http://47.98.121.11:81"
+    api_url:"http://47.98.121.11:81",
+    title:'第一次标题'
   },
  // 以下为搜索框事件
   showInput: function () {
