@@ -1,0 +1,31 @@
+.recommend {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+
+.recommend-item {
+  flex: 1;
+  text-align: center;
+}
+
+.recommend-item image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 140rpx;
+  text-align: center;
+}
+
+.recommend-item text {
+  text-align: center;
+  font-size: 25rpx;
+  height: 55rpx;
+  display: block;
+  color: #666;
+  line-height: 55rpx;
+  overflow: hidden;
+   margin-left: 10%;
+  width: 80%;
+}

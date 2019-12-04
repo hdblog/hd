@@ -3,7 +3,8 @@ const WXAPI = require('apifm-wxapi')
 const CONFIG = require('../../config.js')
 
 import {
-  getMultiData
+  getMultiData,
+  getHot
 } from '../../service/home.js'
 
 
@@ -14,7 +15,9 @@ Page({
    */
   data: {
     banners: [],
-    recommends: []
+    recommends: [],
+    hot: [],
+    tabs: ['推荐','最新','热门']
   },
 
   //载入数据
@@ -34,6 +37,7 @@ Page({
         const datas = res.data;
         const banners = [];
         const recommends = [];
+        let i = 1;
         for (var key in datas) {
           // console.log(datas[key])
           switch (datas[key].type) {
@@ -41,18 +45,26 @@ Page({
               banners.push(datas[key]);
               break;
             case 'recommend':
-              recommends.push(datas[key]);
+              if (i < 5) {
+                recommends.push(datas[key]);
+              }
+              i++;
               break;
           }
         }
-
-     console.log(recommends)
 
         this.setData({
           banners: banners,
           recommends: recommends
         })
       }
+    })
+
+    getHot().then(res => {
+      console.log(res.data)
+      this.setData({
+        hot: res.data
+      })
     })
   }
 

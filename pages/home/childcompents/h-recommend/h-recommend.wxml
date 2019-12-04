@@ -1,0 +1,9 @@
+ <view class="recommend">
+   <block wx:for="{{images}}" wx:key="index">
+      <view class="recommend-item">
+        <image src="{{item.picUrl}}"></image>
+            <text>{{item.title}}</text>
+      </view>
+   </block>
+ </view>
+

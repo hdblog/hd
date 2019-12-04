@@ -1,12 +1,9 @@
 <!--pages/home/home.wxml-->
 <view class="page">
   <h-swiper images="{{banners}}" />
- <view class="recommend">
-   <block wx:for="{{recommends}}" wx:key="index">
-      <view class="recommend-item">
-        <image src="{{item.picUrl}}"></image>
-            <text>{{item.title}}</text>
-      </view>
-   </block>
- </view>
+  <h-recommend images="{{recommends}}" />
+  <h-search />
+  <h3 class="pop">热销产品</h3>
+  <h-hot hots="{{hot}}" />
+  <h-tab-control titles="{{tabs}}" />
 </view>

@@ -1,17 +1,8 @@
 /* pages/home/home.wxss */
 
-
-
-.recomend {
-  display: flex;
-}
-
-.recommend-item {
-  flex:1;
-}
-
-.recommend-item image {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 4rem;
+.pop {
+  text-align: center;
+  padding-top: 30rpx;
+  font-weight: bold;
+  display: block;
 }

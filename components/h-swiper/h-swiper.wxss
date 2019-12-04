@@ -1,1 +1,5 @@
 /* components/h-swiper/h-swiper.wxss */
+.swiper{ height: 160px}
+.swiper image {
+  width: 100%;
+}
