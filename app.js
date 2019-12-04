@@ -1,5 +1,6 @@
 const WXAPI = require('apifm-wxapi')
 const CONFIG = require('config.js')
+const AUTH = require('utils/auth')
 const TOKEN = 'token';
 
 App({
@@ -12,69 +13,20 @@ App({
   onLaunch: function() {
     WXAPI.init(CONFIG.subDomain) // 从根目录的 config.js 文件中读取
     // console.log('小程序初始化完成！');
+   // const token = wx.getStorageSync(TOKEN)
 
-    const token = wx.getStorageSync(TOKEN)
-
-    if (token && token.length !== 0) {
-      //已经有token 验证token是否过期
-     //  this.check_token(token)
-    } else {
-      //没有token 登录获取token
-       // this.login()
-    }
-
-
-
-    /* WXAPI.goodsCategory().then(res => {
-      console.log('请在控制台看打印出来的数据：', res)
-    })
-   wx.getUserInfo({
-      success: function(res) {
-        console.log(res);
-      }
-    })*/
-    wx.getAccountInfoSync({
-      success: function(res) {
-        //    console.log(res)
+  },
+  onShow(e){
+    // 自动登录
+    AUTH.checkHasLogined().then(isLogined => {
+      if (!isLogined) {
+        AUTH.login()
       }
     })
   },
-  login() {
-    console.log('执行了登录操作');
-    wx.login({
-      success: (res) => {
-        const code = res.code;
-        //将code发送服务器
-        wx.request({
-          url: api_url + '/home/site/test',
-          data: {
-            code: code
-          },
-          success: (res) => {
-            const token = res.data.token;
-            this.globaData.token = res.data.data.openid
-            wx.setStorage({
-              key: 'token',
-              data: this.globaData.token,
-            })
-          }
-        })
-      }
-    })
-  },
-  check_token(token) {
-    console.log('执行了验证操作！');
-      wx.request({
-        url: api_url + '/home/site/test',
-        header:{
-          token
-        },
-        success :(res)=>{
-          console.log(res)
-        },
-        fail:(err)=>{
-          console.log(err)
-        }
-      })
+  globalData: {
+    isConnected: true,
+    launchOption: undefined,
+    vipLevel: 0
   }
 })

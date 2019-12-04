@@ -5,5 +5,7 @@
   <h-search />
   <h3 class="pop">热销产品</h3>
   <h-hot hots="{{hot}}" />
-  <h-tab-control titles="{{tabs}}" />
+  <h-tab-control titles="{{tabs}}" bind:tabclick="handleTabClick" />
+    <h-goods goodslist="{{goods[currentType].list}}"/>
+
 </view>

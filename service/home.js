@@ -7,9 +7,9 @@ export function getMultiData(){
     })
 }
 
-export function getHot() {
+export function getProducts(data) {
   return request({
     url: '/shop/goods/list',
-    data: { 'categoryId': 78979}
+    data: data
   })
 }

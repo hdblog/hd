@@ -21,7 +21,8 @@
 		},
 		"preloadBackgroundData": true,
 		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"scopeDataCheck": false,
+		"enhance": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
@@ -72,30 +73,16 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "button",
-					"pathName": "pages/button/button",
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/view/view",
-					"pathName": "pages/view/view",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 4,
-					"name": "input",
-					"pathName": "pages/input/input",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/scroll/scroll",
-					"pathName": "pages/scroll/scroll",
+					"name": "我的",
+					"pathName": "pages/profile/profile",
 					"query": "",
 					"scene": null
 				}

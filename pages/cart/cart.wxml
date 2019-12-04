@@ -1,2 +1,2 @@
 <!--pages/cart/cart.wxml-->
-<text>购物车</text>
+<h-cart />

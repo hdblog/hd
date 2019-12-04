@@ -1,1 +1,16 @@
 /* pages/category/category.wxss */
+.category {
+  display: flex;
+    height: 100%;
+}
+
+.category h-menu {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.category h-content {
+  width: 70%;
+}

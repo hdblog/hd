@@ -1,0 +1,17 @@
+/* pages/category/childcomponents/h-content/h-content.wxss */
+.content {
+  height: 100%;
+ 
+}
+.goods-container{
+    height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width:70%
+}
+
+.detail {
+  width: 100%;
+}

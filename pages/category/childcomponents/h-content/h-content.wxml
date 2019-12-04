@@ -1,0 +1,6 @@
+<scroll-view class='goods-container' scroll-y="true"  >
+  <!-- 3.详情数据展示 -->
+  <view class='detail'>
+    <h-goods goodslist="{{categoryDetail}}" />
+  </view>
+</scroll-view>

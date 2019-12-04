@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "h-cart":"./childcomponents/h-cart/h-cart"
+  },
   "navigationBarTitleText": "购物车"
 }

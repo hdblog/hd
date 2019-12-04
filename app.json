@@ -6,7 +6,7 @@
     "pages/profile/profile",
     "pages/view/view",
     "pages/list/list",
-    "pages/login/login"
+    "pages/goods-details/goods-details"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FE6905",
@@ -43,5 +43,6 @@
         "selectedIconPath": "assets/tabbar/profile_active.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap9.json"
 }

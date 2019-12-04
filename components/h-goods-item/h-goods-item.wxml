@@ -1,0 +1,12 @@
+<!--components/w-goods-item/w-goods-item.wxml-->
+<view class='goods-item'  bindtap="toDetailsTap" data-id="{{item.id}}">
+  <image class='image' src="{{goodsitem.pic}}"  mode='widthFix'/>
+  <view class='desc-info'>
+    <view class='title'>{{goodsitem.name}}</view>
+    <view class='info'>
+      <text class='price'>¥{{goodsitem.originalPrice}}</text>
+      <image class='icon' src="/assets/common/favor.png"/>
+      <text class='cfav'>{{goodsitem.numberFav}}</text>
+    </view>
+  </view>
+</view>

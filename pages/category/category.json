@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+      "h-menu": "./childcomponents/h-menu/h-menu",
+      "h-content": "./childcomponents/h-content/h-content"
+  },
   "navigationBarTitleText": "商品分类"
 }

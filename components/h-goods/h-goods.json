@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "h-goods-item": "../h-goods-item/h-goods-item"
+  }
+}
