@@ -1,0 +1,8 @@
+<!--components/h-goods-swiper/h-goods-swiper.wxml-->
+<view class="swiper-container" wx:if="{{videoId}}">
+  <swiper class="swiper_box" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{images}}" wx:key="id">
+      <image src="{{item.pic}}_m" class="slide-image" mode="aspectFill" lazy-load="true" />
+    </swiper-item>
+  </swiper>
+</view>

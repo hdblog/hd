@@ -41,6 +41,7 @@ Page({
         wx.setStorageSync('referrer', scene.split(',')[1])
       }
     }
+    //获取商品ID
     this.data.goodsId = e.id
     const that = this
     this.data.kjJoinUid = e.kjJoinUid
@@ -56,9 +57,9 @@ Page({
       }
     })
     this.reputation(e.id);
-    this.initAd();
+    //this.initAd();
   },
-  initAd() {
+  /*initAd() {
     setTimeout(() => {
       // 视频激励广告信息
       if (wx.createRewardedVideoAd) {
@@ -80,14 +81,18 @@ Page({
         })
       }
     }, 500)
-  },
+  },*/
   onShow() {
+    //异步获取商品信息和砍价信息
     this.getGoodsDetailAndKanjieInfo(this.data.goodsId)
   },
   async getGoodsDetailAndKanjieInfo(goodsId) {
     const that = this;
+    //获取商品详情
     const goodsDetailRes = await WXAPI.goodsDetail(goodsId)
+    //获取砍价详情
     const goodsKanjiaSetRes = await WXAPI.kanjiaSet(goodsId)
+    console.log(goodsKanjiaSetRes)
     if (goodsDetailRes.code == 0) {
       var selectSizeTemp = SelectSizePrefix;
       if (goodsDetailRes.data.properties) {

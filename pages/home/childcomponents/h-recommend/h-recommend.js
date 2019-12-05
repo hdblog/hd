@@ -22,9 +22,9 @@ Component({
    */
   methods: {
     toDetailsTap: function (e) {
-      wx.navigateTo({
+    /*  wx.navigateTo({
         url: "/pages/goods-details/goods-details?id=" + e.currentTarget.dataset.id
-      })
+      })*/
     },
   }
 })

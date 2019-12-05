@@ -1,5 +1,5 @@
 <!--components/w-goods-item/w-goods-item.wxml-->
-<view class='goods-item'  bindtap="toDetailsTap" data-id="{{item.id}}">
+<view class='goods-item'  bindtap="toDetailsTap" data-id="{{goodsitem.id}}">
   <image class='image' src="{{goodsitem.pic}}"  mode='widthFix'/>
   <view class='desc-info'>
     <view class='title'>{{goodsitem.name}}</view>
