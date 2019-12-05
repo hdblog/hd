@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "h-goods-swiper": "./childcomponents/h-goods-swiper/h-goods-swiper"
+    "h-goods-swiper": "./childcomponents/h-goods-swiper/h-goods-swiper",
+    "h-kanjia": "./childcomponents/h-kanjia/h-kanjia",
+    "h-pintuan": "./childcomponents/h-pintuan/h-pintuan"
   }
 }

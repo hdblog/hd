@@ -1,0 +1,2 @@
+/* pages/goods-details/childcomponents/h-pintuan.wxss */
+@import "/weui/widget/weui-cell/weui-cell.wxss";
